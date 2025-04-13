@@ -9,6 +9,9 @@ ________________________________________
 <img width="460" alt="Screenshot 2025-04-13 at 10 17 59 AM" src="https://github.com/user-attachments/assets/d8d0b818-687d-485c-b476-3d3814a6fdc5" />
 
 
+![9qoohm](https://github.com/user-attachments/assets/2cc39a63-5163-44bd-92f1-2c04756783ae)
+
+
 Event
 UTA Datathon 2025
 Project Title
@@ -109,7 +112,7 @@ INSTRUCTIONS TO RUN
 ********************************************************************************************************************************************************************************************
 1. Download as zip
 2. unzip and open in editor
-3. get into backend dir and build backend -> make sure main.py builds and run "uvicorn main:app --reload --port 8000" (If it fails, then start running from ingest_docs.py -> rag_pipeline.py -> main.py)
-4. uvicorn command should give 200 OK output in the console.
-5. get into frontend dir and build frontend -> npm start -> should open "http://localhost:3000/"
+3. get into backend dir and build backend -> make sure main.py builds and run "uvicorn main:app --reload --port 8000" (If it fails, then start running from ingest_docs.py -> rag_pipeline.py -> main.py). (If you get exception at main.py, saying "Your default credentials were not found". Please use Gemini Key, the gemini project number is provided in the submission. Create a .env file in the backend folder and paste GOOGLE_API_KEY={the API KEY} and re-run main.py)
+4. uvicorn command "Application startup complete." output in the console.
+5. get into frontend dir and build frontend -> npm start -> should open "http://localhost:3000/" (If this fails, run "npm install --force" to get rid of dependency issues)
 6. choose the maverick! from bottom right of the screen and start using.
