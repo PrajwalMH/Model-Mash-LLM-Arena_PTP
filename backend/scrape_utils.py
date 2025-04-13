@@ -24,7 +24,7 @@ def get_all_internal_links(base_url, max_links=100):
                 continue
             soup = BeautifulSoup(response.text, 'html.parser')
         except Exception as e:
-            print(f"⚠️ Skipping {current_url}: {e}")
+            print(f"Skipping {current_url}: {e}")
             continue
 
         visited.add(current_url)
@@ -39,7 +39,7 @@ def get_all_internal_links(base_url, max_links=100):
                 if full_url not in visited and full_url not in to_visit:
                     to_visit.append(full_url)
 
-        print(f"✅ Crawled: {current_url} ({len(visited)} links)")
+        print(f"Crawled: {current_url} ({len(visited)} links)")
 
     return list(visited)
 
