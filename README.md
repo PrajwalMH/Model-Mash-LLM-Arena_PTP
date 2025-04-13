@@ -1,8 +1,8 @@
 # Model-Mash-LLM-Arena_PTP
 
 UTA Datathon 2025 Report
-Team – PTP Codex
-Project AskUTA
+Team – PTP
+Project: AskUTA
 Datathon Report: AskUTA Chatbot
 ________________________________________
 
