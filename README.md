@@ -6,7 +6,7 @@ Project AskUTA
 Datathon Report: AskUTA Chatbot
 ________________________________________
 
-<img width="549" alt="Screenshot 2025-04-13 at 5 41 52 AM" src="https://github.com/user-attachments/assets/90cbae33-5f38-4dca-bf61-72c0f970b179" />
+<img width="460" alt="Screenshot 2025-04-13 at 10 17 59 AM" src="https://github.com/user-attachments/assets/d8d0b818-687d-485c-b476-3d3814a6fdc5" />
 
 
 Event
