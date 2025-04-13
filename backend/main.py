@@ -3,12 +3,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from rag_pipeline import load_rag_chain
 
 app = FastAPI()
-qa = load_rag_chain()  # Load Gemini-powered RAG chain at startup
+qa = load_rag_chain() 
 
-# Allow CORS from React frontend
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # or specify React's port
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
