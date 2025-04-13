@@ -17,7 +17,7 @@ def load_rag_chain():
     retriever = db.as_retriever(search_kwargs={"k": 2})
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-pro-001",  # DO NOT change this to gemini-1.0 or anything else
+        model="gemini-1.5-pro-001",
         temperature=0.5,
         max_output_tokens=256
     )
