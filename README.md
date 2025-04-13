@@ -9,50 +9,47 @@ ________________________________________
 <img width="549" alt="Screenshot 2025-04-13 at 5 41 52 AM" src="https://github.com/user-attachments/assets/90cbae33-5f38-4dca-bf61-72c0f970b179" />
 
 
-📅 Event
+Event
 UTA Datathon 2025
-🏛️ Project Title
+Project Title
 AskUTA Chatbot
-🎓 Team Name
+Team Name
 PTPCodex
-👥 Team Members
+Team Members
 1.	Prajwal Mrithyunjay Hulamani – Student ID: 1002248365
 2.	Pranav Karthik Chinya Umesha – Student ID: 1002238679
 3.	Tejaswi Kulkarni
 ________________________________________
-🔄 Introduction
-The AskUTA Chatbot is a Large Language Model (LLM)-powered conversational assistant developed to enhance the campus experience at the University of Texas at Arlington (UTA). It is designed to answer questions related to university schedules, departments, events, and resources. The chatbot seamlessly integrates a custom LLM backend with a responsive React frontend.
+Introduction
+The AskUTA Chatbot is a Large Language Model (LLM)-powered conversational assistant developed to enhance the campus experience at the University of Texas at Arlington (UTA). It is designed to answer questions related to university schedules, departments, events, and resources. The chatbot seamlessly integrates a custom LLM backend powered by data vectors scraped from open source web data, with a responsive React frontend.
 Our goal was to develop a user-friendly, intelligent assistant that leverages the power of natural language processing to understand and respond to student queries in real-time, reducing the dependency on manual searches and support.
 ________________________________________
-🔧 System Architecture
+System Architecture
 Overview
 The system comprises three primary components:
 1.	Frontend: Built with React.js, offering an intuitive chat interface.
-2.	Backend: Connects the frontend with our LLM using a lightweight Node.js or Python-based server.
-3.	LLM Model: A custom fine-tuned large language model hosted locally or via an API.
+2.	Backend: Connects the frontend with our LLM using fastapi.
+3.	LLM Model: A well known fine-tuned large language model coupled with LangChain for spliting data, HuggingFace for embedding the data and FAISS for converting to vector.
+4.	Data Scraping: BeautifulSoup
+   
 Architecture Diagram
-User → React Frontend → Backend Server → LLM Model → Response → Frontend
+FrontEnd(ReactJS) -> User Query -> Check Memory, Embedd, Create vectors (Langchain,HuggingFace,FAISS) -> LLM response (Gemini) -> Display on UI
 ________________________________________
-🛍️ Tech Stack
+Tech Stack
 •	Frontend: React.js, HTML/CSS, JavaScript
 •	Backend: Node.js / FastAPI
-•	LLM Model: Custom-trained LLM using open-source base models
-•	Hosting: Netlify (frontend)
+•	Data Scraping and storage: BeautifulSoup, LangChain, FAISS, HuggingFace
+•	LLM Model: Gemini
 ________________________________________
-📈 Key Features
+Key Features
 •	Natural conversation interface
-•	Instant response from local LLM
-•	Easy deployment using Netlify
+•	Instant response from pre-trained LLM
 •	Fully customizable and scalable
-________________________________________
-⚙️ Development Process
-🔧 Development Process
-The development of our custom chatbot involved several distinct phases, each contributing to a robust and responsive system built around our custom knowledge base and LLM integration.
 ________________________________________
 1.	Data Collection and Preprocessing
 We began by collecting relevant information from the University of Texas at Arlington (UTA) website. This involved:
 •	Web scraping using BeautifulSoup to extract structured text data from various web pages.
-•	Performing text cleaning and formatting to prepare the data for embedding.
+•	Performing text cleaning and formatting to prepare the data for embedding using HuggingFace and LangChain libraries.
 •	Removing unnecessary HTML tags, scripts, and duplicate content to ensure relevance and accuracy.
 ________________________________________
 2.	Document Ingestion and Embedding
@@ -85,26 +82,25 @@ ________________________________________
 •	The backend and FAISS server (if used externally) were hosted separately or run locally during development.
 •	Environment variables were managed to separate local vs. production endpoints.
 ________________________________________
-❌ Challenges Faced
+Challenges Faced
 •	PowerShell script restrictions when installing packages (resolved by setting execution policies)
 •	Model latency during local execution
 •	CORS issues while connecting frontend to backend
 •	Optimizing prompt engineering for better answers
 ________________________________________
-✨ Highlights & Impact
+Highlights & Impact
 •	Helps students get real-time information on campus queries
 •	Can be expanded to include RAG (retrieval-augmented generation)
 •	Fully local model allows offline and private data handling
 ________________________________________
-🔄 Future Scope
-•	Integrate vector database (e.g., FAISS) for memory/context
+Future Scope
 •	Deploy backend on cloud for wider access
 •	Add speech-to-text and multi-language support
 •	Integrate calendar APIs for event lookups
 ________________________________________
-📄 Conclusion
+Conclusion
 The AskUTA Chatbot demonstrates how LLMs can revolutionize campus engagement through automation and intelligent assistance. Our team successfully built a working prototype that can be scaled and enhanced for production use at UTA.
 We believe this chatbot can evolve into a core part of UTA’s digital ecosystem, making university life more accessible, efficient, and engaging for students and staff alike.
 ________________________________________
-Submitted by Team PTPCodex for UTA Datathon 2025
+Submitted by Team PTP for UTA Datathon 2025
 
