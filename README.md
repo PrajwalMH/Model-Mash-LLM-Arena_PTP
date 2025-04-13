@@ -104,3 +104,12 @@ We believe this chatbot can evolve into a core part of UTA’s digital ecosystem
 ________________________________________
 Submitted by Team PTP for UTA Datathon 2025
 
+********************************************************************************************************************************************************************************************
+INSTRUCTIONS TO RUN
+********************************************************************************************************************************************************************************************
+1. Download as zip
+2. unzip and open in editor
+3. get into backend dir and build backend -> make sure main.py builds and run "uvicorn main:app --reload --port 8000" (If it fails, then start running from ingest_docs.py -> rag_pipeline.py -> main.py)
+4. uvicorn command should give 200 OK output in the console.
+5. get into frontend dir and build frontend -> npm start -> should open [loca](http://localhost:3000/)
+6. choose the maverick! from bottom right of the screen and start using.
